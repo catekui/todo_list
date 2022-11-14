@@ -83,25 +83,25 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'todo_list',
-        'USER': 'djangouser',
-        'PASSWORD': '1234cate',
-        'HOST': 'localhost'
-        # 'PORT': '3306',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
+#         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'todo_list',
 #         'USER': 'djangouser',
-#     'PASSWORD':'1234cate',
+#         'PASSWORD': '1234cate',
+#         'HOST': 'localhost'
+#          'PORT': '3306',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'todo_list',
+        'USER': 'djangouser',
+    'PASSWORD':'1234cate',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
