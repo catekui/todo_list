@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 from decouple import config,Csv
 
@@ -94,14 +95,22 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'todo_list',
+#         'USER': 'djangouser',
+#     'PASSWORD':'1234cate',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todo_list',
-        'USER': 'djangouser',
-    'PASSWORD':'1234cate',
-    }
+    'default': dj_database_url.config(default=config('DATABASE_URL')
+
+
 }
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
