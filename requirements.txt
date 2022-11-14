@@ -28,3 +28,4 @@ soupsieve==2.3.2.post1
 sqlparse==0.4.2
 typing-extensions==3.10.0.2
 whitenoise==6.2.0
+mysqlclient==2.1.1
