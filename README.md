@@ -18,7 +18,7 @@ Here is a run through of how to set up the application:
 * Step 1 : Clone this repository using the git clone link:
   * **`git clone https://github.com/catekui/todo_list.git`**
 * Step 2 : Navigate to the directory:
-  * **`cd Awwards`**
+  * **`cd todo_list`**
 * Step 3 : Open the directory created with your favorite IDE. If Atom type **`atom .`** if VSCode type **`code .`** . This will launch the editor with the project setup,
 * Now feel free to hack around the project.
 
